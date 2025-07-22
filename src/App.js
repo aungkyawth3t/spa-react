@@ -37,12 +37,13 @@ function App() {
       <button onClick={changeName}>Change Name</button>
       <h1>Posts</h1>
       <ul>
-        {posts.map((post) => (
+        {posts.length && posts.map((post) => (
           <li key={post.id}>
             {post.title}
             <button onClick={() => deletePost(post.id)}>Delete</button>
           </li>
         ))}
+        {!posts.length && <p> No Posts Avaliable.</p>}
       </ul>
     </div>
   );
