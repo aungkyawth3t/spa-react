@@ -6,7 +6,7 @@ import PostList from './components/PostList';
 import Modal from './components/Modal/index';
 // hook useState
 function App() {
-  // let name = "Aung Kyaw Thet";
+  let [showModal, setShowModal] = useState(false);
   let [posts, setPosts] = useState([
     {
       id: 1,
@@ -23,17 +23,18 @@ function App() {
   ]);
   return (
     <>
-      <Navbar />
+      <Navbar setShowModal={setShowModal} />
       <PostList posts={posts} />
       {/* <Modal>
         <h1>Zoom class is avaliable now.</h1>
         <p> feel free to <a href="">join here </a></p>
       </Modal> */}
 
-      <Modal>
+      {showModal && <Modal>
         <h1>Terms and Conditions</h1>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum officiis saepe tempora dolorem, iure eum similique voluptate reprehenderit sed culpa odio quis vitae ab illum, magni cumque provident temporibus vel.</p>
-      </Modal>
+        <button onClick={() => setShowModal(false)}>Close</button>
+      </Modal>}
     </>
   );
 }
