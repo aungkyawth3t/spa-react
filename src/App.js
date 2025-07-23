@@ -3,6 +3,7 @@ import './App.css';
 import { useState } from 'react';
 import Navbar from './components/Navbar/index';
 import PostList from './components/PostList';
+import Modal from './components/Modal/index';
 // hook useState
 function App() {
   // let name = "Aung Kyaw Thet";
@@ -24,6 +25,15 @@ function App() {
     <>
       <Navbar />
       <PostList posts={posts} />
+      {/* <Modal>
+        <h1>Zoom class is avaliable now.</h1>
+        <p> feel free to <a href="">join here </a></p>
+      </Modal> */}
+
+      <Modal>
+        <h1>Terms and Conditions</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum officiis saepe tempora dolorem, iure eum similique voluptate reprehenderit sed culpa odio quis vitae ab illum, magni cumque provident temporibus vel.</p>
+      </Modal>
     </>
   );
 }
