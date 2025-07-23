@@ -1,14 +1,7 @@
 .navbar {
-  background-color: yellow;
+  background-color: rgb(54, 160, 231);
   padding: 10px;
-}
-
-.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: auto;
+  color: white;
 }
 
 .navbar .container ul {
