@@ -30,11 +30,11 @@ function App() {
         <p> feel free to <a href="">join here </a></p>
       </Modal> */}
 
-      {showModal && <Modal danger={false}>
+      {showModal && <Modal danger>
         <h1>Terms and Conditions</h1>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum officiis saepe tempora dolorem, iure eum similique voluptate reprehenderit sed culpa odio quis vitae ab illum, magni cumque provident temporibus vel.</p>
         <button onClick={() => setShowModal(false)}>Close</button>
-      </Modal>}
+      </Modal >}
     </>
   );
 }
