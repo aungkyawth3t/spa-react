@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Navbar from './components/Navbar/index';
 import PostList from './components/PostList';
 import Modal from './components/Modal/index';
+import PostForm from './components/PostForm/index';
 // hook useState
 function App() {
   let [showModal, setShowModal] = useState(false);
@@ -30,10 +31,8 @@ function App() {
         <p> feel free to <a href="">join here </a></p>
       </Modal> */}
 
-      {showModal && <Modal danger>
-        <h1>Terms and Conditions</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum officiis saepe tempora dolorem, iure eum similique voluptate reprehenderit sed culpa odio quis vitae ab illum, magni cumque provident temporibus vel.</p>
-        <button onClick={() => setShowModal(false)}>Close</button>
+      {showModal && <Modal setShowModal={setShowModal}>
+        <PostForm />
       </Modal >}
     </>
   );
